@@ -10,7 +10,7 @@
 // app.listen(process.env.PORT || 3000,
 //     () => console.log("server is running . . ."));
 function test()
-{fetch('https://secret-hollows-21282.herokuapp.com/')
+{fetch('https://github.com/aleenzd/web0.git.herokuapp.com/')
 .then(response => response.json())
 .then(json => console.log(json))
 }
