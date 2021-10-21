@@ -53,4 +53,6 @@ app.post("/Authenticate", function(req,res){
         }
     }}res.send(auth);
 })
-app.listen(1234)
+// app.listen(1234)
+app.listen(process.env.PORT || 1234, 
+	() => console.log("Server is running..."));
