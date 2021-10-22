@@ -2,13 +2,13 @@ const reader = require('xlsx');
 const file=reader.readFile('./myFile.xlsx'); 
 const worksheet=file.Sheets['Sheet1'];
  data=reader.utils.sheet_to_json(worksheet);
-
+ var cors=require('cors');
+ app.use(cors());
 const express=require('express')
 const app=express()
 const bodyParser=require("body-parser")
 app.use(bodyParser.json());
-var cors=require('cors');
-app.use(cors());
+
 
 app.get('/',function(req,res){
     res.send("<h1>Hello world</h1>");
@@ -54,5 +54,5 @@ app.post("/Authenticate", function(req,res){
     }}res.send(auth);
 })
 // app.listen(1234)
-app.listen(process.env.PORT || 1234, 
+app.listen(process.env.PORT || 3000, 
 	() => console.log("Server is running..."));
